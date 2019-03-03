@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/asteny/consul-deb.svg?branch=master)](https://travis-ci.org/asteny/consul-deb)[ ![Download](https://api.bintray.com/packages/asten/consul/consul/images/download.svg) ](https://bintray.com/asten/consul/consul/_latestVersion)
 
-Consul deb
-----------
+#Consul deb
 
 Package with [Consul](https://consul.io) for Ubunty Xenial 16.04
 
