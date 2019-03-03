@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+USER="consul"
+GROUP="consul"
+HOME="/var/lib/consul"
+DESC="Consul is a tool for service discovery and configuration"
+
+
+case "$1" in
+  configure)
+
+    # create group
+    if ! getent group ${GROUP} >/dev/null; then
+       /usr/sbin/addgroup --quiet --system ${GROUP}
+    fi
+
+    # create colord user if it isn't already there
+    if ! getent passwd ${USER} >/dev/null; then
+       /usr/sbin/adduser --system --ingroup ${GROUP} --home ${HOME} ${USER} --gecos "${DESC}"
+    fi
+
+    # ensure permissions to the ${HOME}
+    chown -R ${USER}:${GROUP} ${HOME}
+
+    # create folder for configs
+    mkdir -p /etc/consul.d
+
+  ;;
+esac
+
+
+/bin/systemctl daemon-reload
+
+exit 0
+

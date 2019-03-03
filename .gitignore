@@ -1,0 +1,5 @@
+/build/packages/*.deb
+/build/repo/db
+/build/repo/dists
+/build/repo/pool
+/.idea/

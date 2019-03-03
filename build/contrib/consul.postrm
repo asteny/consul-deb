@@ -1,0 +1,39 @@
+#!/bin/bash
+
+
+USER="consul"
+GROUP="consul"
+HOME="/var/lib/consul"
+DESC="Consul is a tool for service discovery and configuration"
+
+
+
+
+case "$1" in
+  remove)
+    /bin/systemctl stop consul
+  ;;
+
+  upgrade)
+    /bin/systemctl restart consul
+  ;;
+
+  purge)
+    /usr/sbin/deluser ${USER}
+    /usr/sbin/delgroup ${GROUP}
+    /bin/rm -fr /etc/default/consul /etc/consul.d /var/lib/consul
+  ;;
+
+  remove|failed-upgrade|abort-install|abort-upgrade|disappear)
+    /bin/systemctl restart consul
+    exit 0
+  ;;
+
+  *)
+    echo "postrm called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+
+esac
+
+exit 0

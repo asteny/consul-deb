@@ -1,0 +1,4 @@
+CMD_OPTS="agent -config-dir=/etc/consul.d/"
+GOMAXPROCS=4
+SHELL=/bin/bash
+PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin
