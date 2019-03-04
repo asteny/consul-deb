@@ -15,3 +15,6 @@ apt-get update
 apt-get install consul -y
 
 ```
+
+[All package versions in Bintray repo](https://bintray.com/asten/consul/consul)
+-------------------------------------------------------------------------------
