@@ -10,7 +10,7 @@ Installation
 ------------
 ```bash
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
-echo "deb https://dl.bintray.com/asten/consul xenial main" | sudo tee -a /etc/apt/sources.list.d/consul
+echo "deb https://dl.bintray.com/asten/consul xenial main" | tee -a /etc/apt/sources.list.d/consul.list
 apt-get update
 apt-get install consul -y
 
