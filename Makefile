@@ -17,7 +17,6 @@ build: download
 		$(NAME)=/usr/bin/$(NAME) \
 		build/contrib/$(NAME).service=/lib/systemd/system/$(NAME).service \
 		build/contrib/$(NAME).logrotate=/etc/logrotate.d/$(NAME) \
-		build/contrib/$(NAME).preset=/usr/lib/systemd/system-preset/$(NAME).preset \
 		build/contrib/$(NAME).defaults=/etc/default/$(NAME)
 
 download:
