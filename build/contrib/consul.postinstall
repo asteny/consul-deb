@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 USER="consul"
 GROUP="consul"
 HOME="/var/lib/consul"
@@ -34,4 +32,3 @@ esac
 /bin/systemctl daemon-reload
 
 exit 0
-
