@@ -4,7 +4,7 @@
 Consul deb
 ==========
 
-Deb package with [Consul](https://consul.io) for Ubunty (16.04 - 18.04)
+Deb package with [Consul](https://consul.io) for Ubuntu (16.04 - 18.04)
 
 Installation
 ------------
