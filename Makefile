@@ -1,5 +1,5 @@
 NAME = consul
-VERSION = 1.5.0
+VERSION = 1.5.1
 ITERATION = 0
 UID ?= 0
 
