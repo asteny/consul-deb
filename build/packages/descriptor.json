@@ -15,10 +15,10 @@
     },
 
     "version": {
-        "name": "1.8.2.0",
+        "name": "1.8.3.0",
         "desc": "",
-        "released": "2020-08-07",
-        "vcs_tag": "1.8.2",
+        "released": "2020-08-12",
+        "vcs_tag": "1.8.3",
         "gpgSign": true
     },
 
