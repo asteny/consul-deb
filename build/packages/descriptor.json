@@ -30,6 +30,14 @@
         "deb_architecture": "amd64",
         "override": 1 }
     }
-],
+    ],
+    [{"includePattern": "build/packages/(.*\.deb)", "uploadPattern": "pool/main/c/consul/$1",
+    "matrixParams": {
+        "deb_distribution": "bionic",
+        "deb_component": "main",
+        "deb_architecture": "amd64",
+        "override": 1 }
+    }
+    ],
     "publish": true
 }
