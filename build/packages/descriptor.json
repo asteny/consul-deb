@@ -15,29 +15,21 @@
     },
 
     "version": {
-        "name": "1.7.4.0",
+        "name": "1.7.8.0",
         "desc": "",
-        "released": "2020-06-10",
-        "vcs_tag": "1.7.4",
+        "released": "2020-09-11",
+        "vcs_tag": "1.7.8",
         "gpgSign": true
     },
 
     "files":
-    [
-      {"includePattern": "build/packages/(.*\.deb)", "uploadPattern": "pool/main/c/consul/$1",
-        "matrixParams": {
-          "deb_distribution": "xenial",
-          "deb_component": "main",
-          "deb_architecture": "amd64",
-          "override": 1 }
-    },
-      {"includePattern": "build/packages/(.*\.deb)", "uploadPattern": "pool/main/c/consul/$1",
+    [{"includePattern": "build/packages/(.*\.deb)", "uploadPattern": "pool/main/c/consul/$1",
         "matrixParams": {
           "deb_distribution": "ubuntu",
           "deb_component": "main",
           "deb_architecture": "amd64",
           "override": 1 }
-    }
+     }
     ],
     "publish": true
 }
