@@ -1,11 +1,6 @@
-NAME = consul
-VERSION = 1.9.2
-ITERATION = 0
-UID ?= 0
-
 all: build
 
-build: download
+build: compress
 	chmod -Rv 644 build/contrib/
 	fpm -s dir -f -t deb \
 		-n $(NAME) \
@@ -18,6 +13,9 @@ build: download
 		build/contrib/$(NAME).service=/lib/systemd/system/$(NAME).service \
 		build/contrib/$(NAME).logrotate=/etc/logrotate.d/$(NAME) \
 		build/contrib/$(NAME).defaults=/etc/default/$(NAME)
+
+compress: download
+	upx consul
 
 download:
 	curl -o $(NAME).zip https://releases.hashicorp.com/$(NAME)/$(VERSION)/$(NAME)_$(VERSION)_linux_amd64.zip
