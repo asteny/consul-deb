@@ -8,7 +8,7 @@ jobs:
     container: asteny/fpm-python-docker:focal-3.8
     env:
       NAME: consul
-      VERSION: 1.11.2
+      VERSION: 1.12.2
       ITERATION: 0
       GPGKEY: ${{ secrets.GPGKEY }}
       GPGPASS: ${{ secrets.GPGPASS }}
@@ -41,3 +41,4 @@ jobs:
           package_cloud push the_asten/consul/ubuntu/xenial build/packages/consul_${VERSION}-${ITERATION}_amd64.deb --skip-errors
           package_cloud push the_asten/consul/ubuntu/bionic build/packages/consul_${VERSION}-${ITERATION}_amd64.deb --skip-errors
           package_cloud push the_asten/consul/ubuntu/focal build/packages/consul_${VERSION}-${ITERATION}_amd64.deb --skip-errors
+          package_cloud push the_asten/consul/ubuntu/jammy build/packages/consul_${VERSION}-${ITERATION}_amd64.deb --skip-errors

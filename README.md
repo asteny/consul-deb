@@ -3,7 +3,7 @@
 Consul deb
 ==========
 
-Deb package with [Consul](https://consul.io) for Ubuntu (xenial, bionic, focal)
+Deb package with [Consul](https://consul.io) for Ubuntu (xenial, bionic, focal, jammy)
 
 Installation
 ------------
@@ -12,7 +12,7 @@ apt-get update
 apt-get install gnupg2 apt-transport-https ca-certificates -y
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys DFE73FF0A1987C64
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys A57ED69D49D1012A
-printf "deb https://packagecloud.io/the_asten/consul/ubuntu/ focal main \ndeb-src https://packagecloud.io/the_asten/consul/ubuntu/ focal main" | tee -a /etc/apt/sources.list.d/consul.list
+printf "deb https://packagecloud.io/the_asten/consul/ubuntu/ jammy main \ndeb-src https://packagecloud.io/the_asten/consul/ubuntu/ jammy main" | tee -a /etc/apt/sources.list.d/consul.list
 apt-get update
 apt-get install consul -y
 
